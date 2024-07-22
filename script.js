@@ -1,3 +1,25 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const db = firebase.database();
+    const pageViewRef = db.ref('page_views');
+
+    // Generate a unique ID for each user session
+    const sessionId = Math.random().toString(36).substring(2, 15);
+    
+    // Add this user to the list of active users
+    pageViewRef.child(sessionId).set(true);
+
+    // Remove this user from the list of active users when they leave the page
+    window.addEventListener('beforeunload', () => {
+        pageViewRef.child(sessionId).remove();
+    });
+
+    // Update the count of active users
+    pageViewRef.on('value', snapshot => {
+        const activeUsers = snapshot.numChildren();
+        document.getElementById('active-users').innerText = activeUsers;
+    });
+});
+
 const errorData = {
       100: { breve: "Memoria heap non disponibile", descrizione: "Memoria heap non disponibile", risposta: "Nessuna risposta" },
       101: { breve: "Monitoraggio stack: consumo di stack ha raggiunto la soglia di errore", descrizione: "Il consumo di stack ha raggiunto la soglia di errore. L'operazione sicura non è più possibile. L'informazione aggiuntiva 1 del messaggio di errore mostra il numero del task in cui il consumo di stack è troppo grande.", risposta: "Blocco impulso" },
