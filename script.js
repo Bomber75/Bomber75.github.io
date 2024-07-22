@@ -448,7 +448,7 @@ const errorData = {
       2748: { breve: "Non è stato possibile eliminare una curva attiva", descrizione: "Non è consentito sovrascrivere completamente la curva polinomiale durante l'elaborazione. Tuttavia, il ricaricamento utilizzando un segmento di curva modificato sarebbe possibile. Conseguenza: La curva precedente continua ad essere elaborata.", risposta: "Nessuna risposta" },
       2749: { breve: "Versione del file camma sconosciuta", descrizione: "Il firmware del controller non conosce la versione del file camma trasmesso. Conseguenza: Il file camma viene respinto.", risposta: "Nessuna risposta" },
       2750: { breve: "Troppe rivoluzioni per segmento definite", descrizione: "Uno dei segmenti della curva trasmessi è stato definito per più di 65535 rivoluzioni master o slave. Conseguenza: Il file camma viene respinto.", risposta: "Nessuna risposta" },
-      2800: { breve: "Nessuna identificazione nell'intestazione DPRAM", descrizione: "Nessuna identificazione trovata nell'intestazione DPRAM (DEADBEEF)", risposta: "Nessuna risposta" },
+      2800: { breve: "Nessuna identificazione nell'intestazione DPRAM", descrizione: "Nessuna identificazione trovata nell'intestazione DPRAM (DEADBEEF)", risposta: "Nessuna risposta" }
 };
 
 function findError() {
