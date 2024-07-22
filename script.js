@@ -1,5 +1,4 @@
 const errorData = {
-   const errorData = {
       100: { breve: "Memoria heap non disponibile", descrizione: "Memoria heap non disponibile", risposta: "Nessuna risposta" },
       101: { breve: "Monitoraggio stack: consumo di stack ha raggiunto la soglia di errore", descrizione: "Il consumo di stack ha raggiunto la soglia di errore. L'operazione sicura non è più possibile. L'informazione aggiuntiva 1 del messaggio di errore mostra il numero del task in cui il consumo di stack è troppo grande.", risposta: "Blocco impulso" },
       102: { breve: "Errore durante l'accesso alla funzione indiretta", descrizione: "Errore durante l'accesso alla funzione indiretta", risposta: "Blocco impulso" },
