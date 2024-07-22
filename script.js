@@ -459,8 +459,8 @@ function findError() {
     if (input in errorData) {
         const error = errorData[input];
         resultDiv.innerHTML = `<h2>Error No: ${input}</h2>
-                               <p><strong>Brief error text:</strong> ${error.brief}</p>
-                               <p><strong>Error description:</strong> ${error.description}</p>`;
+                               <p><strong>Brief error text:</strong> ${error.breve}</p>
+                               <p><strong>Error description:</strong> ${error.descrizione}</p>`;
     } else {
         resultDiv.innerHTML = "<p>Error number not found.</p>";
     }
